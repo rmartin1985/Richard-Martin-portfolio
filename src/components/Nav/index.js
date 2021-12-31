@@ -2,7 +2,7 @@ import React from "react";
 
 function Nav() {
     return (
-        <header>
+        <header className="flex-row px-1">
             <h1>
                 Richard Martin
             </h1>
