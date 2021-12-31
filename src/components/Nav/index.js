@@ -1,26 +1,24 @@
 import React from "react";
 
 function Nav() {
+    
     return (
-        <header className="flex-row px-1">
-            <h1>
-                Richard Martin
-            </h1>
-            <nav>
-                <ul className="flex-row">
-                    <li className="mx-2">
-                        <a href="#about-me">about me</a>
-                    </li>
-                    <li>
-                        <a href="#work">projects</a>
-                    </li>
-                    <li>
-                        <a href="#contact-me">contact me</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </header>
+        <nav>
+            <ul className="flex-row space-evenly">
+                <li className="mx-2">
+                    <a href="#about-me">about me</a>
+                </li>
+                <li className="mx-2">
+                    <a href="#portfolio">portfolio</a>
+                </li>
+                <li className="mx-2">
+                    <a href="#contact">contact</a>
+                </li>
+                <li className="mx-2">
+                    <a href="#resume">resume</a>
+                </li>
+            </ul>
+        </nav>
     );
 }
 
