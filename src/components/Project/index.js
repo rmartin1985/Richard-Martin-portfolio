@@ -43,7 +43,7 @@ function Project(props) {
             title={project.title}
             subtitle={project.author}
             actionIcon={
-              <IconButton onClick={event => window.location.href=`${project.link}`} className={classes.clickableIcon}
+              <IconButton className={classes.clickableIcon}
                 sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                 aria-label={`info about ${project.title}`}
                 
