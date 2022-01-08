@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -11,10 +11,17 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['About', 'Portfolio', 'Contact', 'Resume'];
-
-const Nav = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+const Nav = (props) => {
+    const {
+        pages = [],
+        currentPage,
+        setCurrentPage,
+        pageSelected,
+        setPageSelected
+    } = props;
+    
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -67,8 +74,8 @@ const Nav = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem component={Link} to={page} key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem component={Link} to={page.name} key={page.id} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -83,12 +90,16 @@ const Nav = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button component={Link} to={page}
-                key={page}
-                onClick={handleCloseNavMenu}
+              <Button component={Link} to={page.name}
+                key={page.id}
+                id={`${currentPage.name === page.name && !pageSelected && 'navActive'}`}
+                onClick={() => {
+                    setCurrentPage(page);
+                    setPageSelected(false);
+                }}
                 sx={{ color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
