@@ -1,4 +1,6 @@
 import React from 'react';
+import { CssBaseline } from '@mui/material';
+import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './pages/About';
 // import Hero from './components/Hero';
@@ -11,25 +13,28 @@ import Resume from './pages/Resume';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Header></Header>
+    <CssBaseline>
+      <Router>
+        <div>
+          <header>
+            <Header></Header>
+          </header>
+          <main>
+            <Switch>
+              <Route exact path='/' component={About} />
+              <Route exact path='/about' component={About} />
+              <Route exact path='/portfolio' component={Portfolio} />
+              <Route exact path='/contact' component={ContactForm} />
+              <Route exact path='/resume' component={Resume} />
 
-        <main>
-          <Switch>
-            <Route exact path='/' component={About} />
-            <Route exact path='/about' component={About} />
-            <Route exact path='/portfolio' component={Portfolio} />
-            <Route exact path='/contact' component={ContactForm} />
-            <Route exact path='/resume' component={Resume} />
-            
-            <Route render={() => <h1 className='display-2'>Wrong Page!</h1>} />
-          </Switch>
-        </main>
+              <Route render={() => <h1 className='display-2'>Wrong Page!</h1>} />
+            </Switch>
+          </main>
 
 
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </CssBaseline>
   );
 }
 

@@ -1,25 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  min-height: 100%;
-  display: flex;
-  margin: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-
-
-}
-
-#navBar {
-  max-width: 100%;
-}
-
 .MuiBox-root {
   justify-content: space-evenly;
   
@@ -27,4 +5,8 @@ body {
 
 #navActive {
   background-color: black;
+}
+
+.img {
+  height: 1000px;
 }

@@ -32,14 +32,14 @@ const Nav = (props) => {
   };
 
   return (
-    <AppBar >
-      <Container id="navBar">
+    <AppBar position="static" >
+      <Container>
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ my: 5, display: { xs: 'none', md: 'flex' } }}
+            sx={{ display: { xs: 'none', md: 'flex' } }}
           >
             RICHARD MARTIN
           </Typography>
