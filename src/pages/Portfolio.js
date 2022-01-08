@@ -46,7 +46,10 @@ function Portfolio() {
         }
     ]
     return (
-        <Project projects={projects}></Project>
+        <Project 
+        projects={projects}>
+
+        </Project>
 
     );
 }

@@ -25,17 +25,14 @@ function Project(props) {
 
   const classes = useStyles();
 
-  // const theme = createTheme({
-  //   text: {
-  //     opacity: 0
-  //   }
-  // })
-
   return (
-      <ImageList sx={{ width: 'auto', height: 'auto', "& :hover .MuiImageListItem-img": {opacity: 0.3 }, "& :hover .MuiImageListItemBar-root": {opacity: 1 }}}>
+      <ImageList sx={{ pt: 3,
+        "& :hover .MuiImageListItem-img": {opacity: 0.3 }, 
+        "& :hover .MuiImageListItemBar-root": {opacity: 1 }}}>
         {projects.map((project) => (
           <ImageListItem
-             key={project.id}>
+             key={project.id}
+             sx={{ p: 5  }}>
             <img
               sx={{ opacity: 1 }}
               src={`${project.img}`}
