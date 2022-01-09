@@ -1,24 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-// import { GitHub } from "@material-ui/icons";
+import { GitHub } from "@material-ui/icons";
 import {
-  // ImageList,
-  // IconButton,
-  // ImageListItem,
-  // ImageListItemBar,
   Box,
   Grid,
   Card,
-  // CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
   Button,
   Typography
 } from "@mui/material";
-
-
-//  import { ThemeProvider, createTheme } from "@mui/system";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -28,26 +20,17 @@ const useStyles = makeStyles({
   cardContainer: {
     width: '95%',
     margin: '5rem auto',
-    height: 400
-  },
-  cardContent: {
-    color: "#ffffff",
-    backgroundColor: "rgba(0,0,0,.24)",
   },
   pictureContainer: {
-    top: 0,
-    right: 0,
-    height: '100%',
-    width: '100%'
+    height: 300,
+    width: '100%',
+    '&:hover': {
+      opacity: 0.3
+    }
+
   },
-  textSecondary: {
-    color: "rgba(255,255,255,0.78)"
-  },
-  cardActions: {
-    color: "#ffffff",
-    backgroundColor: "rgba(0,0,0,.24)",
-  }
 });
+
 
 
 
@@ -61,29 +44,29 @@ function Project(props) {
       <Box component='div' className={classes.mainContainer}>
         <Grid container justifyContent='center'>
           {projects.map((project) => (
-            <Grid item xs={12} sm={8} md={6} key={project.id}>
+            <Grid item sm={12} md={6} key={project.id}>
               <Card className={classes.cardContainer} >
                   <CardMedia
-                    className={classes.pictureContainer}
+                  className={classes.pictureContainer}
                     component="img"
                     alt={project.title}
+                    height='140'
                     image={project.img}
                   />
-                <CardContent id="content" className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5">
-                    {project.title}
-                  </Typography>
-                  <Typography variant="body2" className={classes.textSecondary} component='p'>
-                    Sample Text
-                  </Typography>
-                </CardContent>
-
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5">
+                      {project.title}
+                    </Typography>
+                    <Typography variant="body2" color='textSecondary' component='p'>
+                      Proident ut ea consequat do enim incididunt qui adipisicing magna consectetur irure. Dolor consequat exercitation occaecat consectetur. Cupidatat proident aliquip culpa nisi elit consectetur officia ea ea excepteur elit aliqua sunt. Ea sunt quis tempor ullamco nostrud excepteur id anim. Velit amet aliqua dolor ea sunt Lorem qui. Sit nostrud deserunt laborum pariatur aliqua cupidatat.
+                    </Typography>
+                  </CardContent>
                 <CardActions className={classes.cardActions}>
-                  <Button size='small' color='inherit' variant="outlined">
+                  <Button href={project.link} target='_blank' size='small' color='primary'>
                     Deployed
                   </Button>
-                  <Button size='small' color='inherit' variant="outlined">
-                    GitHub
+                  <Button size='small' color='primary'>
+                    <GitHub />
                   </Button>
                 </CardActions>
 
@@ -94,46 +77,6 @@ function Project(props) {
       </Box>
     </>
   )
-
-
-
-
-
-  // return (
-  //     <ImageList cols={2} gap={25} sx={{ mt: 15, p: 5,
-  //       "& :hover .MuiImageListItem-img": {opacity: 0.3 }, 
-  //       "& :hover .MuiImageListItemBar-root": {opacity: 1 }}}>
-  //       {projects.map((project) => (
-  //         <ImageListItem
-  //            key={project.id}>
-  //           <img
-  //             sx={{ opacity: 1 }}
-  //             src={`${project.img}`}
-  //             srcSet={`${project.img}`}
-  //             alt={project.title}
-  //             loading="lazy"
-  //           />
-  //           <ImageListItemBar 
-  //             sx={{ opacity: 0 }}
-  //             title={project.title}
-  //             subtitle={project.author}
-  //             actionIcon={
-  //               <IconButton onClick={event => window.location.href = `${project.link}`} className={classes.clickableIcon}
-  //                 sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-  //                 aria-label={`info about ${project.title}`}
-
-  //               >
-  //                 <GitHub />
-  //               </IconButton>
-  //             }
-  //           />
-
-  //         </ImageListItem>
-
-  //       
-
-  //     </ImageList>
-  // );
 }
 
 export default Project;

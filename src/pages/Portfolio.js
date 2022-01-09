@@ -5,6 +5,7 @@ import runner from '../assets/projects/generic-runner-picture.jpeg'
 import place from '../assets/projects/placeimg_640_480_tech.jpg'
 import rps from '../assets/projects/rock-paper-scissors-hand-gesture-vector-25169737.jpeg'
 import spoiler from '../assets/projects/spoiler-alert.png'
+import javaScriptImg from '../assets/projects/javascript.png'
 
 function Portfolio() {
     const projects = [
@@ -41,7 +42,7 @@ function Portfolio() {
         {
             title: "MERN",
             id: 6,
-            img: place,
+            img: javaScriptImg,
             link: "https://rmartin1985.github.io/rock-paper-scissors/"
         }
     ]
