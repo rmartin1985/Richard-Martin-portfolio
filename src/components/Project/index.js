@@ -9,7 +9,7 @@ import {
   Box,
   Grid,
   Card,
-  CardActionArea,
+  // CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
@@ -17,18 +17,37 @@ import {
   Typography
 } from "@mui/material";
 
+
 //  import { ThemeProvider, createTheme } from "@mui/system";
 
 const useStyles = makeStyles({
-    mainContainer: {
-      background: '#233',
-      height: '100%'
-    },
-    cardContainer: {
-      maxWidth: 345,
-      margin: '5rem auto',
-    }
-  });
+  mainContainer: {
+    background: '#233',
+    height: '100%'
+  },
+  cardContainer: {
+    width: '95%',
+    margin: '5rem auto',
+    height: 400
+  },
+  cardContent: {
+    color: "#ffffff",
+    backgroundColor: "rgba(0,0,0,.24)",
+  },
+  pictureContainer: {
+    top: 0,
+    right: 0,
+    height: '100%',
+    width: '100%'
+  },
+  textSecondary: {
+    color: "rgba(255,255,255,0.78)"
+  },
+  cardActions: {
+    color: "#ffffff",
+    backgroundColor: "rgba(0,0,0,.24)",
+  }
+});
 
 
 
@@ -41,35 +60,35 @@ function Project(props) {
     <>
       <Box component='div' className={classes.mainContainer}>
         <Grid container justifyContent='center'>
-        {projects.map((project) => (
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer} key={project.id}>
-              <CardActionArea component='div'>
-                <CardMedia
-                  component="img"
-                  alt={project.title}
-                  height='140'
-                  image={project.img}
-                />
-                <CardContent>
+          {projects.map((project) => (
+            <Grid item xs={12} sm={8} md={6} key={project.id}>
+              <Card className={classes.cardContainer} >
+                  <CardMedia
+                    className={classes.pictureContainer}
+                    component="img"
+                    alt={project.title}
+                    image={project.img}
+                  />
+                <CardContent id="content" className={classes.cardContent}>
                   <Typography gutterBottom variant="h5">
-                    {projects[0].title}
+                    {project.title}
                   </Typography>
-                  <Typography variant="body2" color='textSecondary' component='p'>
-                    Proident ut ea consequat do enim incididunt qui adipisicing magna consectetur irure. Dolor consequat exercitation occaecat consectetur. Cupidatat proident aliquip culpa nisi elit consectetur officia ea ea excepteur elit aliqua sunt. Ea sunt quis tempor ullamco nostrud excepteur id anim. Velit amet aliqua dolor ea sunt Lorem qui. Sit nostrud deserunt laborum pariatur aliqua cupidatat.
+                  <Typography variant="body2" className={classes.textSecondary} component='p'>
+                    Sample Text
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size='small' color='primary'>
+
+                <CardActions className={classes.cardActions}>
+                  <Button size='small' color='inherit' variant="outlined">
                     Deployed
                   </Button>
-                  <Button size='small' color='primary'>
+                  <Button size='small' color='inherit' variant="outlined">
                     GitHub
                   </Button>
                 </CardActions>
-              </CardActionArea>
-            </Card>
-          </Grid>
+
+              </Card>
+            </Grid>
           ))}
         </Grid>
       </Box>

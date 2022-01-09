@@ -1,6 +1,5 @@
 import React from 'react';
 import { CssBaseline } from '@mui/material';
-import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './pages/About';
 // import Hero from './components/Hero';

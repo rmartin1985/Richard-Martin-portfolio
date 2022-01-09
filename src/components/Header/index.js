@@ -22,7 +22,7 @@ function Header() {
         }
     ]);
 
-    const [currentPage, setCurrentPage] = useState(pages[0]);
+    const [currentPage, setCurrentPage] = useState('');
 
     const [pageSelected, setPageSelected] = useState(false);
 
