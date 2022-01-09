@@ -32,9 +32,11 @@ const Nav = (props) => {
   };
 
   return (
-    <AppBar position="static" >
+    
+    <AppBar sx={{ bgcolor:'#2b2d42'}} position="sticky">
       <Container>
         <Toolbar disableGutters>
+          <MenuItem>
           <Typography
             variant="h6"
             noWrap
@@ -43,6 +45,7 @@ const Nav = (props) => {
           >
             RICHARD MARTIN
           </Typography>
+          </MenuItem>
 
           <Box  sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton

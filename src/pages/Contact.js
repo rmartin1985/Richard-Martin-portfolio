@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { makeStyles, withStyles } from '@material-ui/core';
-import { 
+import {
   TextField,
   Typography,
-  Button, 
+  Button,
   Grid,
-  Box  } from '@mui/material';
-  import SendIcon from '@mui/icons-material/Send';
+  Box,
+  FormHelperText
+} from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
 
 import { validateEmail } from '../utils/helpers';
 
@@ -17,31 +19,26 @@ const useStyles = makeStyles(theme => ({
     transform: 'translate(-50%, -50%)',
     position: 'absolute'
   },
-  button: {
-    marginTop: '1rem',
-    color: 'tomato',
-    borderColor: 'tomato'
-  }
 
 }))
 
 const InputField = withStyles({
   root: {
     '& label.Mui-focused': {
-      color: 'tomato',
+      color: '#d90429',
     },
     '& label': {
-      color: 'tan'
+      color: '#2b2d42'
     },
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
-        borderColor: 'tan',
+        borderColor: '#2b2d42',
       },
       '&:hover fieldset': {
-        borderColor: 'tan',
+        borderColor: '#2b2d42',
       },
       '&.Mui-focused fieldset': {
-        borderColor: 'tan',
+        borderColor: '#d90429',
       }
     }
 
@@ -84,15 +81,47 @@ function ContactForm() {
   return (
     <Box component='div'>
       <Grid container justifyContent='center'>
-        <Box component='form' className={classes.form}>
-          <Typography variant='h5' style={{ color: 'tomato', textAlign: 'center', textTransform: 'uppercase'}}>
+        <Box component='form' className={classes.form} onSubmit={handleSubmit}>
+          <Typography variant='h5' style={{ color: '#2b2d42', textAlign: 'center', textTransform: 'uppercase' }}>
             Contact me
           </Typography>
-          <InputField fullWidth label='Name' variant='outlined' inputProps={{ style: { color: 'blue' } }} margin='dense' size='small'/>
-          <InputField fullWidth label='Email' variant='outlined' inputProps={{ style: { color: 'blue' } }} margin='dense' size='small' />
-          <Button className={classes.button} variant='outlined' fullWidth endIcon={<SendIcon/>}>
+          <InputField onBlur={handleChange}
+            fullWidth 
+            defaultValue={name}
+            required
+            name='Name'
+            label='Name'
+            variant='outlined'
+            inputProps={{ style: { color: 'blue' } }}
+            margin='dense' size='small'
+          />
+          <InputField onBlur={handleChange} 
+            fullWidth 
+            defaultValue={email} 
+            required
+            name='email' 
+            label='Email' 
+            variant='outlined' 
+            inputProps={{ style: { color: 'blue' } }} 
+            margin='dense' 
+            size='small' />
+          <InputField onBlur={handleChange} 
+            fullWidth 
+            defaultValue={message}
+            required
+            name='Message' 
+            label='Message' 
+            multiline rows={5} 
+            variant='outlined' 
+            inputProps={{ style: { color: 'blue' } }} 
+            margin='dense' size='small' />
+          {errorMessage && (
+            <FormHelperText>
+              {errorMessage}
+            </FormHelperText>
+          )}
+          <Button onSubmit={handleSubmit} sx={{ color: '#edf2f4', bgcolor: '#2b2d42'}} variant='outlined' fullWidth endIcon={<SendIcon />}>
             Contact me
-
           </Button>
         </Box>
       </Grid>

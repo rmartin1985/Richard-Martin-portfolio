@@ -14,7 +14,7 @@ import {
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: '#233',
+    background: '#8d99ae',
     height: '100%'
   },
   cardContainer: {
@@ -46,21 +46,21 @@ function Project(props) {
           {projects.map((project) => (
             <Grid item sm={12} md={6} key={project.id}>
               <Card className={classes.cardContainer} >
-                  <CardMedia
+                <CardMedia
                   className={classes.pictureContainer}
-                    component="img"
-                    alt={project.title}
-                    height='140'
-                    image={project.img}
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5">
-                      {project.title}
-                    </Typography>
-                    <Typography variant="body2" color='textSecondary' component='p'>
-                      Proident ut ea consequat do enim incididunt qui adipisicing magna consectetur irure. Dolor consequat exercitation occaecat consectetur. Cupidatat proident aliquip culpa nisi elit consectetur officia ea ea excepteur elit aliqua sunt. Ea sunt quis tempor ullamco nostrud excepteur id anim. Velit amet aliqua dolor ea sunt Lorem qui. Sit nostrud deserunt laborum pariatur aliqua cupidatat.
-                    </Typography>
-                  </CardContent>
+                  component="img"
+                  alt={project.title}
+                  height='140'
+                  image={project.img}
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5">
+                    {project.title}
+                  </Typography>
+                  <Typography variant="body2" color='textSecondary' component='p'>
+                    Proident ut ea consequat do enim incididunt qui adipisicing magna consectetur irure. Dolor consequat exercitation occaecat consectetur. Cupidatat proident aliquip culpa nisi elit consectetur officia ea ea excepteur elit aliqua sunt. Ea sunt quis tempor ullamco nostrud excepteur id anim. Velit amet aliqua dolor ea sunt Lorem qui. Sit nostrud deserunt laborum pariatur aliqua cupidatat.
+                  </Typography>
+                </CardContent>
                 <CardActions className={classes.cardActions}>
                   <Button href={project.link} target='_blank' size='small' color='primary'>
                     Deployed
