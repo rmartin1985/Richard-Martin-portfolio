@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import { GitHub } from "@material-ui/icons";
+import GitHubIcon from '@mui/icons-material/GitHub';
 import {
   Box,
   Grid,
@@ -66,7 +66,7 @@ function Project(props) {
                     Deployed
                   </Button>
                   <Button size='small' color='primary'>
-                    <GitHub />
+                    <GitHubIcon />
                   </Button>
                 </CardActions>
 

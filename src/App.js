@@ -7,32 +7,30 @@ import Header from './components/Header';
 import Portfolio from './pages/Portfolio';
 import ContactForm from './pages/Contact';
 import Resume from './pages/Resume';
+import Footer from './components/Footer';
 
 
 
 function App() {
   return (
     <CssBaseline>
-      <Router>
-        <div>
-          <header>
-            <Header></Header>
-          </header>
-          <main>
-            <Switch>
-              <Route exact path='/' component={About} />
-              <Route exact path='/about' component={About} />
-              <Route exact path='/portfolio' component={Portfolio} />
-              <Route exact path='/contact' component={ContactForm} />
-              <Route exact path='/resume' component={Resume} />
+          <Router>
+            <header>
+              <Header></Header>
+            </header>
+            <main>
+              <Switch>
+                <Route exact path='/' component={About} />
+                <Route exact path='/about' component={About} />
+                <Route exact path='/portfolio' component={Portfolio} />
+                <Route exact path='/contact' component={ContactForm} />
+                <Route exact path='/resume' component={Resume} />
 
-              <Route render={() => <h1 className='display-2'>Wrong Page!</h1>} />
-            </Switch>
-          </main>
-
-
-        </div>
-      </Router>
+                <Route render={() => <h1 className='display-2'>Wrong Page!</h1>} />
+              </Switch>
+            </main>
+          </Router>
+        <Footer />
     </CssBaseline>
   );
 }
