@@ -34,9 +34,9 @@ const Nav = (props) => {
   return (
     
     <AppBar sx={{ bgcolor:'#2b2d42'}} position="sticky">
-      <Container>
+      <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <MenuItem>
+          <MenuItem component={Link} to='/' >
           <Typography
             variant="h6"
             noWrap
@@ -91,7 +91,7 @@ const Nav = (props) => {
           >
             RICHARD MARTIN
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ justifyContent: 'flex-end',flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button component={Link} to={page.name}
                 key={page.id}

@@ -86,7 +86,7 @@ function ContactForm() {
             Contact me
           </Typography>
           <InputField onBlur={handleChange}
-            fullWidth 
+            fullWidth
             defaultValue={name}
             required
             name='Name'
@@ -95,34 +95,36 @@ function ContactForm() {
             inputProps={{ style: { color: 'blue' } }}
             margin='dense' size='small'
           />
-          <InputField onBlur={handleChange} 
-            fullWidth 
-            defaultValue={email} 
+          <InputField onBlur={handleChange}
+            fullWidth
+            defaultValue={email}
             required
-            name='email' 
-            label='Email' 
-            variant='outlined' 
-            inputProps={{ style: { color: 'blue' } }} 
-            margin='dense' 
+            name='email'
+            label='Email'
+            variant='outlined'
+            inputProps={{ style: { color: 'blue' } }}
+            margin='dense'
             size='small' />
-          <InputField onBlur={handleChange} 
-            fullWidth 
+          <InputField onBlur={handleChange}
+            fullWidth
             defaultValue={message}
             required
-            name='Message' 
-            label='Message' 
-            multiline rows={5} 
-            variant='outlined' 
-            inputProps={{ style: { color: 'blue' } }} 
+            name='Message'
+            label='Message'
+            multiline rows={5}
+            variant='outlined'
+            inputProps={{ style: { color: 'blue' } }}
             margin='dense' size='small' />
-          {errorMessage && (
-            <FormHelperText>
-              {errorMessage}
-            </FormHelperText>
-          )}
-          <Button onSubmit={handleSubmit} sx={{ color: '#edf2f4', bgcolor: '#2b2d42'}} variant='outlined' fullWidth endIcon={<SendIcon />}>
+          <Button onSubmit={handleSubmit} sx={{ color: '#edf2f4', bgcolor: '#2b2d42' }} variant='outlined' fullWidth endIcon={<SendIcon />}>
             Contact me
           </Button>
+          {errorMessage && (
+            <FormHelperText>
+              <Typography variant='h5' style={{ color: '#2b2d42', textAlign: 'center', textTransform: 'uppercase' }}>
+                {errorMessage}
+              </Typography>
+            </FormHelperText>
+          )}
         </Box>
       </Grid>
 
