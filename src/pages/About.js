@@ -1,8 +1,9 @@
-import React from "react";
-import { Grid, Box, Typography, Avatar, Container } from '@mui/material';
+import React, { useState } from "react";
+import { Grid, Box, Avatar, Container } from '@mui/material';
 import { makeStyles } from "@material-ui/core";
-import Typed from 'react-typed';
+// import Typed from 'react-typed';
 import rickAvatar from '../assets/hero/new profile.png'
+import pixel from '../assets/hero/pxArt.png'
 
 const useStyles = makeStyles({
     typedContainer: {
@@ -17,6 +18,7 @@ const useStyles = makeStyles({
 })
 
 function About() {
+    const [over, setOver] = useState(false);
 
     const classes = useStyles();
     return (
@@ -24,18 +26,20 @@ function About() {
             <Box className={classes.typedContainer} sx={{ backgroundColor: '#8d99ae' }}>
                 <Container fixed>
                     <Grid>
-                        <Avatar
-                            src={rickAvatar}
-                            alt='Rick Martin'
-                            sx={{ bgcolor: '#2b2d42', width: 200, height: 200 }}
-                        />
+                            <Avatar
+                                onMouseOver={() => setOver(true)}
+                                onMouseOut={() => setOver(false)}
+                                src={over ? pixel : rickAvatar}
+                                alt='Rick Martin'
+                                sx={{ bgcolor: '#2b2d42', width: 200, height: 200 }}
+                            />
                         <h2 className="my-5" id="about">about me</h2>
                         <p>
                             Hello! I'm Richard. Recently becomming a Full Stack Developer has been an excellent journey of personal and professional growth.
                             My background has always been in customer service with over a decade in the restaurant industry and most recently in real estate.
                             Web Development is just another extension of customer service. Highly motivated and dedicated to my clients to listen to their needs,
                             understand the product they envision, and then be able to create and deliver to them in a timely and efficient manner.
-                            Whether creating a project solo or joining a team and collaborating to create something exciting and functional, I will deligently 
+                            Whether creating a project solo or joining a team and collaborating to create something exciting and functional, I will deligently
                             until the final produt is exactly what was asked for.<br></br><br></br>
 
                             In my personal life, I like to spend most of my nights hanging in with my beautiful wife, our dog Meatball
