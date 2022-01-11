@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles } from "@material-ui/core";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {
@@ -24,9 +24,6 @@ const useStyles = makeStyles({
   pictureContainer: {
     height: 300,
     width: '100%',
-    '&:hover': {
-      opacity: 0.3
-    }
 
   },
 });
@@ -35,6 +32,12 @@ const useStyles = makeStyles({
 
 
 function Project(props) {
+  const [selectElement, setSelectElement] = useState(0);
+
+  const handleClick =(id) => {
+    setSelectElement(id)
+  }
+  const [over, setOver] = useState(false);
 
   const projects = props.projects
 
@@ -49,10 +52,14 @@ function Project(props) {
               <Card className={classes.cardContainer} >
                 <CardMedia
                   className={classes.pictureContainer}
+                  onMouseOver={() => {
+                    handleClick(project.id);
+                    setOver(true)}}
+                  onMouseOut={() => setOver(false)}
                   component="img"
                   alt={project.title}
                   height='140'
-                  image={project.img}
+                  image={selectElement === project.id && over ? project.hover : project.img}
                 />
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5">
