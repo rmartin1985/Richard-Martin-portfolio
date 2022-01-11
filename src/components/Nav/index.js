@@ -83,14 +83,16 @@ const Nav = (props) => {
               ))}
             </Menu>
           </Box>
+          <MenuItem component={Link} to='/' >
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }} }
           >
             RICHARD MARTIN
           </Typography>
+          </MenuItem>
           <Box sx={{ justifyContent: 'flex-end',flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button component={Link} to={page.name}

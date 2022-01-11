@@ -28,7 +28,7 @@ const Footer = () => {
 
     return (
 
-        <Box component='footer' className={classes.foot}>
+        <Box component='footer' className={classes.foot} >
             <BottomNavigation sx={{ bgcolor: '#8d99ae' }} showLabels>
                 <BottomNavigationAction href='https://github.com/rmartin1985' target='_blank' label="GitHub" className={classes.root} icon={<GitHubIcon />} />
                 <BottomNavigationAction href='https://www.linkedin.com/in/rickmartinatx/' target='_blank' label="LinkedIn" className={classes.root} icon={<LinkedInIcon />} />

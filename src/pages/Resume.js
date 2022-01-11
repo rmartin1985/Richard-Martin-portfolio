@@ -1,15 +1,15 @@
 import React from "react";
-// import { makeStyles } from "@material-ui/core";
 import {
-    Typography, 
+    Typography,
     Box,
     Grid,
     List,
     ListItem,
     ListItemText,
-    ListItemIcon
+    ListItemIcon,
+    Button
 } from "@mui/material";
-import  JavascriptIcon  from '@mui/icons-material/Javascript'
+import JavascriptIcon from '@mui/icons-material/Javascript'
 import CodeIcon from '@mui/icons-material/Code';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import BrushIcon from '@mui/icons-material/Brush';
@@ -23,7 +23,7 @@ import DataObjectIcon from '@mui/icons-material/DataObject';
 import StorageIcon from '@mui/icons-material/Storage';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import DeviceHubIcon from '@mui/icons-material/DeviceHub';
-
+import RichardResume from '../assets/Richard Martin Resume.pdf';
 // {
 //     id: 7,s
 //     name: 'RESTful API',
@@ -33,6 +33,7 @@ import DeviceHubIcon from '@mui/icons-material/DeviceHub';
 
 
 function Resume() {
+
     const frontEnd = [
         {
             id: 1,
@@ -50,7 +51,7 @@ function Resume() {
             icon: AttachMoneyIcon
         },
         {
-            id: 4, 
+            id: 4,
             name: 'React',
             icon: DeveloperModeIcon
         },
@@ -88,7 +89,7 @@ function Resume() {
             icon: SettingsIcon
         },
         {
-            id: 4, 
+            id: 4,
             name: 'MySQL, Sequelize',
             icon: DataObjectIcon
         },
@@ -110,7 +111,7 @@ function Resume() {
     ];
     return (
         <>
-            <Box sx={{ display: 'flex', backgroundColor: '#8d99ae', justifyContent: 'center', height: '100%', mb: 10 }}>
+            <Box sx={{ display: 'flex', backgroundColor: '#8d99ae', justifyContent: 'center', height: '100%' }}>
                 <Grid container >
                     <Grid item xs={12} md={6}>
                         <Typography textAlign='center' sx={{ mt: 4, mb: 2 }} variant="h4" component="div">
@@ -118,15 +119,16 @@ function Resume() {
                         </Typography>
                         <Grid sx={{ display: 'flex', justifyContent: 'center' }}>
                             <List>
-                                {frontEnd.map((front) =>(
-                                <ListItem key={front.id}>
-                                    <ListItemIcon>
-                                        <front.icon sx={{ fontSize: 60 }}/>
-                                    </ListItemIcon>
-                                    <ListItemText
-                                        primary={front.name}
-                                    />
-                                </ListItem>
+                                {frontEnd.map((front) => (
+                                    <ListItem key={front.id}>
+                                        <ListItemIcon>
+                                            <front.icon sx={{ fontSize: 60, color: '#2b2d42' }} />
+                                        </ListItemIcon>
+                                        <ListItemText
+                                            primary={front.name}
+                                            sx={{ color: '#2b2d42', p: 2}}
+                                        />
+                                    </ListItem>
                                 ))}
                             </List>
                         </Grid>
@@ -137,21 +139,30 @@ function Resume() {
                         </Typography>
                         <Grid sx={{ display: 'flex', justifyContent: 'center' }}>
                             <List>
-                            {backEnd.map((back) =>(
-                                <ListItem key={back.id}>
-                                    <ListItemIcon>
-                                        <back.icon sx={{ fontSize: 60 }}/>
-                                    </ListItemIcon>
-                                    <ListItemText
-                                        primary={back.name}
-                                    />
-                                </ListItem>
+                                {backEnd.map((back) => (
+                                    <ListItem key={back.id}>
+                                        <ListItemIcon>
+                                            <back.icon sx={{ fontSize: 60, color: '#2b2d42' }} />
+                                        </ListItemIcon>
+                                        <ListItemText
+                                            primary={back.name}
+                                            sx={{ color: '#2b2d42', p: 2}}
+                                        />
+                                    </ListItem>
                                 ))}
                             </List>
                         </Grid>
                     </Grid>
                 </Grid>
             </Box>
+            <Box sx={{backgroundColor: '#8d99ae', mb: 10, pt: 5}}>
+                <Grid container direction="row" justifyContent="center" >
+                    <Button variant="contained" component='a' href={RichardResume} download="Richard_Martin_Resume.pdf" sx={{backgroundColor: '#2b2d42'}}>
+                        Download My Resume
+                    </Button>
+                </Grid>
+            </Box>
+
         </>
     );
 };

@@ -1,48 +1,59 @@
 import React from "react";
 import Project from '../components/Project/index'
-import robots from '../assets/projects/robots.jpeg'
-import runner from '../assets/projects/generic-runner-picture.jpeg'
+// import robots from '../assets/projects/robots.jpeg'
+// import runner from '../assets/projects/generic-runner-picture.jpeg'
 import place from '../assets/projects/placeimg_640_480_tech.jpg'
-import rps from '../assets/projects/rock-paper-scissors-hand-gesture-vector-25169737.jpeg'
+// import rps from '../assets/projects/rock-paper-scissors-hand-gesture-vector-25169737.jpeg'
 import spoiler from '../assets/projects/spoiler-alert.png'
 import javaScriptImg from '../assets/projects/javascript.png'
+import fullStack from '../assets/projects/fullstack.jpeg';
+import eCommerce from '../assets/projects/e-commerce.png';
+import graphql from '../assets/projects/graphql.png';
+import mern from '../assets/projects/mern.jpeg';
+import pwa from '../assets/projects/pwa.jpeg';
 
 function Portfolio() {
     const projects = [
         {
-            title: "Run Buddy",
+            title: "Spoiler Alert",
             id: 1,
-            img: runner,
-            link: "https://rmartin1985.github.io/run-buddy/"
+            img: fullStack,
+            hover: spoiler,
+            link: "https://obscure-ravine-58128.herokuapp.com/"
         },
         {
-            title: "Robot Gladiators",
+            title: "Shop-Shop",
             id: 2,
-            img: robots,
-            link: "https://rmartin1985.github.io/robot-gladiators/"
+            img: eCommerce,
+            hover: place,
+            link: "https://radiant-tundra-86540.herokuapp.com/"
         },
         {
             title: "Plan My Day",
             id: 3,
-            img: place,
+            img: javaScriptImg,
+            hover: place,
             link: "https://rmartin1985.github.io/plan-my-day/"
         },
         {
-            title: "Spoiler Alert",
+            title: "Book Search Engine",
             id: 4,
-            img: spoiler,
-            link: "https://obscure-ravine-58128.herokuapp.com/"
+            img: graphql,
+            hover: place,
+            link: "https://pacific-dawn-01756.herokuapp.com/"
         },
         {
-            title: "Rock Paper Scissors",
+            title: "Budget Tracker",
             id: 5,
-            img: rps,
-            link: "https://rmartin1985.github.io/rock-paper-scissors/"
+            img: pwa,
+            hover: place,
+            link: "https://warm-chamber-52689.herokuapp.com/"
         },
         {
             title: "MERN",
             id: 6,
-            img: javaScriptImg,
+            img: mern,
+            hover: place,
             link: "https://rmartin1985.github.io/rock-paper-scissors/"
         }
     ]

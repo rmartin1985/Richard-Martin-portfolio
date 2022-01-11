@@ -35,6 +35,7 @@ const useStyles = makeStyles({
 
 
 function Project(props) {
+
   const projects = props.projects
 
   const classes = useStyles();
