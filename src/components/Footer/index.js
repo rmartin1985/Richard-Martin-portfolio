@@ -7,13 +7,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 
 const useStyles = makeStyles({
-    root: {
-        '& .MuiBottomNavigationAction-root': {
-            minWidth: 0,
-            masWidth: 250,
-            color: 'tomato'
-        }
-    },
     foot: {
         position: 'fixed',
         bottom: 0,
@@ -30,9 +23,9 @@ const Footer = () => {
 
         <Box component='footer' className={classes.foot} >
             <BottomNavigation sx={{ bgcolor: '#8d99ae' }} showLabels>
-                <BottomNavigationAction href='https://github.com/rmartin1985' target='_blank' label="GitHub" className={classes.root} icon={<GitHubIcon />} />
-                <BottomNavigationAction href='https://www.linkedin.com/in/rickmartinatx/' target='_blank' label="LinkedIn" className={classes.root} icon={<LinkedInIcon />} />
-                <BottomNavigationAction href='https://www.instagram.com/rickmartin1985/' target='_blank' label="Instagram" className={classes.root} icon={<InstagramIcon />} />
+                <BottomNavigationAction sx={{ color: '#2b2d42' }} href='https://github.com/rmartin1985' target='_blank' label="GitHub" className={classes.root} icon={<GitHubIcon />} />
+                <BottomNavigationAction sx={{ color: '#2b2d42' }} href='https://www.linkedin.com/in/rickmartinatx/' target='_blank' label="LinkedIn" className={classes.root} icon={<LinkedInIcon />} />
+                <BottomNavigationAction sx={{ color: '#2b2d42' }} href='https://www.instagram.com/rickmartin1985/' target='_blank' label="Instagram" className={classes.root} icon={<InstagramIcon />} />
             </BottomNavigation>
         </Box>
 

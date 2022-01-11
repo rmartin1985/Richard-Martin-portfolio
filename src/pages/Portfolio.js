@@ -8,6 +8,7 @@ import eCommerce from '../assets/projects/e-commerce.png';
 import graphql from '../assets/projects/graphql.png';
 import mern from '../assets/projects/mern.jpeg';
 import pwa from '../assets/projects/pwa.jpeg';
+import shopShop from '../assets/projects/shop-shop.gif';
 
 function Portfolio() {
     const projects = [
@@ -22,7 +23,7 @@ function Portfolio() {
             title: "Shop-Shop",
             id: 2,
             img: eCommerce,
-            hover: place,
+            hover: shopShop,
             link: "https://radiant-tundra-86540.herokuapp.com/"
         },
         {
