@@ -152,7 +152,12 @@ function Resume() {
             </Box>
             <Box sx={{backgroundColor: '#8d99ae', mb: 10, pt: 5}}>
                 <Grid container direction="row" justifyContent="center" >
-                    <Button variant="contained" component='a' href={RichardResume} download="Richard_Martin_Resume.pdf" sx={{backgroundColor: '#2b2d42'}}>
+                    <Button 
+                        variant="contained" 
+                        component='a' 
+                        href={RichardResume} 
+                        download="Richard_Martin_Resume.pdf" 
+                        sx={{backgroundColor: '#2b2d42', '&.MuiButtonBase-root:hover': { bgcolor: '#2b2d42' }}}>
                         Download My Resume
                     </Button>
                 </Grid>

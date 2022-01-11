@@ -35,7 +35,7 @@ const Nav = (props) => {
     
     <AppBar sx={{ bgcolor:'#2b2d42'}} position="sticky">
       <Container maxWidth='xl'>
-        <Toolbar disableGutters>
+        <Toolbar>
           <MenuItem component={Link} to='/' >
           <Typography
             variant="h6"

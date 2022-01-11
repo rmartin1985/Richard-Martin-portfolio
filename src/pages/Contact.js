@@ -115,12 +115,19 @@ function ContactForm() {
             variant='outlined'
             inputProps={{ style: { color: 'blue' } }}
             margin='dense' size='small' />
-          <Button onSubmit={handleSubmit} sx={{ color: '#edf2f4', bgcolor: '#2b2d42' }} variant='outlined' fullWidth endIcon={<SendIcon />}>
+          <Button 
+            disableElevation
+            disableRipple
+            onSubmit={handleSubmit} 
+            sx={{ color: '#edf2f4', bgcolor: '#2b2d42', '&.MuiButtonBase-root:hover': { bgcolor: '#2b2d42', borderColor: '#d90429' } }} 
+            variant='outlined' 
+            fullWidth 
+            endIcon={<SendIcon />}>
             Contact me
           </Button>
           {errorMessage && (
             <FormHelperText>
-              <Typography variant='h5' style={{ color: '#2b2d42', textAlign: 'center', textTransform: 'uppercase' }}>
+              <Typography variant='p' style={{ color: '#2b2d42', textAlign: 'center', textTransform: 'uppercase' }}>
                 {errorMessage}
               </Typography>
             </FormHelperText>
