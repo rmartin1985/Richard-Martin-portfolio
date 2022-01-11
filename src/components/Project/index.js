@@ -28,9 +28,6 @@ const useStyles = makeStyles({
   },
 });
 
-
-
-
 function Project(props) {
   const [selectElement, setSelectElement] = useState(0);
 

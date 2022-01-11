@@ -3,7 +3,7 @@ import { Grid, Box, Typography, Avatar, } from '@mui/material';
 import { makeStyles } from "@material-ui/core";
 import Typed from 'react-typed';
 import Particles from 'react-tsparticles'
-import rickAvatar from '../assets/hero/new profile.png'
+import rickAvatar from '../assets/avatar/new profile.png'
 
 const useStyles = makeStyles(theme => ({
     title: {
@@ -47,7 +47,7 @@ function Home() {
                 </Typography>
                 <Typography className={classes.subtitle} variant='h5'>
                     <Typed
-                        strings={['Web Design', 'Web Development', 'MERN Stack']}
+                        strings={['Web Development', 'MERN Stack', 'JavaScript', 'GraphQL', 'jQuery']}
                         typeSpeed={40}
                         backSpeed={60}
                         loop />

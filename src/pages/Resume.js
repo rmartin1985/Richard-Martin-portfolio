@@ -24,12 +24,7 @@ import StorageIcon from '@mui/icons-material/Storage';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import DeviceHubIcon from '@mui/icons-material/DeviceHub';
 import RichardResume from '../assets/Richard Martin Resume.pdf';
-// {
-//     id: 7,s
-//     name: 'RESTful API',
-//     description: 'icon',
-//     icon: ApiIcon
-// },
+
 
 
 function Resume() {

@@ -1,9 +1,6 @@
 import React from "react";
 import Project from '../components/Project/index'
-// import robots from '../assets/projects/robots.jpeg'
-// import runner from '../assets/projects/generic-runner-picture.jpeg'
 import place from '../assets/projects/placeimg_640_480_tech.jpg'
-// import rps from '../assets/projects/rock-paper-scissors-hand-gesture-vector-25169737.jpeg'
 import spoiler from '../assets/projects/spoiler-alert.png'
 import javaScriptImg from '../assets/projects/javascript.png'
 import fullStack from '../assets/projects/fullstack.jpeg';
