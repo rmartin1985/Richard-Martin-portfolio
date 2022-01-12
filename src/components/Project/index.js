@@ -24,12 +24,9 @@ const useStyles = makeStyles({
     borderRadius: '25px'
   },
   pictureContainer: {
-    height: 300,
     width: '100%',
     "&.MuiCardMedia-img": {
-      objectFit: 'scale-down',
       backgroundColor: '#2b2d42',
-      // border: '5px solid #ef223c'
     }
   },
   cardContent: {
@@ -37,7 +34,8 @@ const useStyles = makeStyles({
     backgroundColor: '#d90429',
     display: 'flex',
     justifyContent: 'space-between',
-    borderTop: '5px solid #2b2d42'
+    borderTop: '5px solid #2b2d42',
+    alignItems: 'center'
 
   },
   cardActions: {
@@ -66,6 +64,12 @@ function Project(props) {
               <Card className={classes.cardContainer} >
                 <CardMedia
                   className={classes.pictureContainer}
+                  sx={{
+                    height: {
+                      xs: 150,
+                      md: 400
+                    }, objectFit: { xs: 'contain', md: 'cover' }
+                  }}
                   onMouseOver={() => {
                     handleClick(project.id);
                     setOver(true)
@@ -73,10 +77,9 @@ function Project(props) {
                   onMouseOut={() => setOver(false)}
                   component="img"
                   alt={project.title}
-                  height='140'
                   image={selectElement === project.id && over ? project.hover : project.img}
                 />
-                <CardContent className={classes.cardContent}>
+                <CardContent className={classes.cardContent} sx={{ height: 100}}>
                   <Typography gutterBottom variant="h5">
                     {project.title}
                   </Typography>

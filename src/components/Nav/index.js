@@ -33,10 +33,10 @@ const Nav = (props) => {
 
   return (
     
-    <AppBar sx={{ bgcolor:'#2b2d42'}} position="sticky">
-      <Container maxWidth='xl'>
-        <Toolbar>
-          <MenuItem component={Link} to='/' >
+    <AppBar sx={{ bgcolor:'#2b2d42', p: 0}} position="sticky">
+      <Container maxWidth='xxl' disableGutters={true} sx={{ }}>
+        <Toolbar nogutters='true'>
+          <MenuItem component={Link} to='/' disableGutters={true}>
           <Typography
             variant="h6"
             noWrap
@@ -73,7 +73,7 @@ const Nav = (props) => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none', m: 0 },
               }}
             >
               {pages.map((page) => (
