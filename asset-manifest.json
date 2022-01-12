@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/rmartin1985/Richard-Martin-portfolio/static/css/main.e7c0694d.css",
+    "main.js": "/rmartin1985/Richard-Martin-portfolio/static/js/main.97ae7557.js",
+    "static/js/787.e49a5bed.chunk.js": "/rmartin1985/Richard-Martin-portfolio/static/js/787.e49a5bed.chunk.js",
+    "static/media/plan.gif": "/rmartin1985/Richard-Martin-portfolio/static/media/plan.0fd911edf4d2ec473573.gif",
+    "static/media/books.gif": "/rmartin1985/Richard-Martin-portfolio/static/media/books.af82d7c40573310340e1.gif",
+    "static/media/shop-shop.gif": "/rmartin1985/Richard-Martin-portfolio/static/media/shop-shop.ad8e72c01eb8b15baf26.gif",
+    "static/media/spoiler-alert.png": "/rmartin1985/Richard-Martin-portfolio/static/media/spoiler-alert.dd9aa35449dd1d04cca8.png",
+    "static/media/mern.jpeg": "/rmartin1985/Richard-Martin-portfolio/static/media/mern.16857e17b930b8d6c8fa.jpeg",
+    "static/media/pwa.jpeg": "/rmartin1985/Richard-Martin-portfolio/static/media/pwa.ced6834976b0c1dda02a.jpeg",
+    "static/media/new profile.png": "/rmartin1985/Richard-Martin-portfolio/static/media/new profile.6c4576c606a64e324343.png",
+    "static/media/placeimg_640_480_tech.jpg": "/rmartin1985/Richard-Martin-portfolio/static/media/placeimg_640_480_tech.826b3905bec6c959e96a.jpg",
+    "static/media/budget.gif": "/rmartin1985/Richard-Martin-portfolio/static/media/budget.8d316cc09663e81ddc5c.gif",
+    "static/media/graphql.png": "/rmartin1985/Richard-Martin-portfolio/static/media/graphql.7add7c7a1aa167532c70.png",
+    "static/media/Richard Martin Resume.pdf": "/rmartin1985/Richard-Martin-portfolio/static/media/Richard Martin Resume.9bb5ae7b2563e72e8263.pdf",
+    "static/media/fullstack.jpeg": "/rmartin1985/Richard-Martin-portfolio/static/media/fullstack.459c5ea05f3d68903371.jpeg",
+    "static/media/javascript.png": "/rmartin1985/Richard-Martin-portfolio/static/media/javascript.ab90b01b628d6e416723.png",
+    "static/media/e-commerce.png": "/rmartin1985/Richard-Martin-portfolio/static/media/e-commerce.8dddd91232e837d73281.png",
+    "index.html": "/rmartin1985/Richard-Martin-portfolio/index.html",
+    "main.e7c0694d.css.map": "/rmartin1985/Richard-Martin-portfolio/static/css/main.e7c0694d.css.map",
+    "main.97ae7557.js.map": "/rmartin1985/Richard-Martin-portfolio/static/js/main.97ae7557.js.map",
+    "787.e49a5bed.chunk.js.map": "/rmartin1985/Richard-Martin-portfolio/static/js/787.e49a5bed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7c0694d.css",
+    "static/js/main.97ae7557.js"
+  ]
+}
