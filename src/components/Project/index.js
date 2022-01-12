@@ -19,6 +19,7 @@ const useStyles = makeStyles({
   },
   cardContainer: {
     width: '90%',
+    minWidth: 350,
     margin: '5rem auto',
     border: '5px solid #2b2d42',
     borderRadius: '25px'

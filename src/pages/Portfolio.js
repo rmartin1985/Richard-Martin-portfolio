@@ -9,6 +9,9 @@ import graphql from '../assets/projects/graphql.png';
 import mern from '../assets/projects/mern.jpeg';
 import pwa from '../assets/projects/pwa.jpeg';
 import shopShop from '../assets/projects/shop-shop.gif';
+import books from '../assets/projects/books.gif';
+import budget from '../assets/projects/budget.gif';
+import plan from '../assets/projects/plan.gif';
 
 function Portfolio() {
     const projects = [
@@ -30,21 +33,21 @@ function Portfolio() {
             title: "Plan My Day",
             id: 3,
             img: javaScriptImg,
-            hover: place,
+            hover: plan,
             link: "https://rmartin1985.github.io/plan-my-day/"
         },
         {
             title: "Book Search Engine",
             id: 4,
             img: graphql,
-            hover: place,
+            hover: books,
             link: "https://pacific-dawn-01756.herokuapp.com/"
         },
         {
             title: "Budget Tracker",
             id: 5,
             img: pwa,
-            hover: place,
+            hover: budget,
             link: "https://warm-chamber-52689.herokuapp.com/"
         },
         {
