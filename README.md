@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Richard Martin's Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ ![](https://img.shields.io/badge/license-MIT-blue)
 
-## Available Scripts
+  ## Description
+ Hello! I'm Richard. Recently becomming a Full Stack Developer has been an excellent journey of personal and professional growth.
+My background has always been in customer service with over a decade in the restaurant industry and most recently in real estate.
+Web Development is just another extension of customer service. Highly motivated and dedicated to my clients to listen to their needs, understand the product they envision, and then be able to create and deliver to them in a timely and efficient manner.
+Whether creating a project solo or joining a team and collaborating to create something exciting and functional, I will work deligently until the final produt is exactly what was asked for.
 
-In the project directory, you can run:
+In my personal life, I like to spend most of my nights hanging in with my beautiful wife, our dog Meatball
+the Great Pyrenees, and our cat Jersey the Maine Coon. I love to cook and I am always on the look out for a
+new recipe each week. I try to learn a new skill in the kitchen and perfect my craft every time I attempt a
+new dish. We are also season ticket holders for the Austin FC soccer team. If I am not cooking for my family
+or at a soccer game, then you can bet you will find me at a concert or any one of our Emo nights dancing and singing to the songs of my childhood.
 
-### `npm start`
+  ## Table of Contents
+  1. [Installation](##installation)
+  2. [Deployed Application](#deployed-application)
+  3. [Technology](#technology)
+  4. [Questions](#questions)
+  5. [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  ## Deployed Application
+  Please click the following link  to be taken to a Heroku app of this application: 
+  [Richard Martin Portfolio](https://richard-martin.herokuapp.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+  ## Technology Used
+  **1. [React](https://reactjs.org/)**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  **2. [Material UI](https://mui.com/)**
 
-### `npm run build`
+  **3. [Node.js](https://nodejs.org/en/)**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  ## Questions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  If you have any questions regarding this project, you can reach me at my GitHub account or by email at:
+  <br />
+  Github: [rmartin1985](https://github.com/rmartin1985)
+  <br />
+  Email: rickmartinatx@gmail.com
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  ## License
+  Licensed under the [MIT License](LICENSE)
