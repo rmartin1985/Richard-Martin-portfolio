@@ -1,25 +1,11 @@
 import React from "react";
 import { Grid, Box, Avatar, Container, Typography } from '@mui/material';
-// import { makeStyles } from "@material-ui/core";
 import rickAvatar from '../assets/avatar/new profile.png'
 
-// const useStyles = makeStyles({
-//     typedContainer: {
-//         position: 'absolute',
-//         top: '50%',
-//         left: '50%',
-//         transform: 'translate(-50%, -50%)',
-//         width: '100vw',
-//         zIndex: 1,
-//     }
-
-// })
-
 function About() {
-    // const classes = useStyles();
     return (
         <>
-            <Box sx={{ backgroundColor: '#8d99ae' }} py={5}>
+            <Box sx={{ height: '100%', backgroundColor: '#8d99ae' }} py={5}>
                 <Container >
                     <Grid container direction="row" justifyContent="flex-start" alignItems="center">
                         <Avatar

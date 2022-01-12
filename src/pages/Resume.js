@@ -150,8 +150,8 @@ function Resume() {
                     </Grid>
                 </Grid>
             </Box>
-            <Box sx={{backgroundColor: '#8d99ae', mb: 10, pt: 5}}>
-                <Grid container direction="row" justifyContent="center" >
+            <Box sx={{backgroundColor: '#8d99ae', pt: 5}}>
+                <Grid container direction="row" justifyContent="center" sx={{ pb: 10 }}>
                     <Button 
                         variant="contained" 
                         component='a' 
