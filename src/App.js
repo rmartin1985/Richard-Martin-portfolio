@@ -1,8 +1,8 @@
 import React from 'react';
 import { CssBaseline } from '@mui/material';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import About from './pages/About';
 import './App.css';
+import About from './pages/About';
 import Header from './components/Header';
 import Portfolio from './pages/Portfolio';
 import ContactForm from './pages/Contact';
@@ -34,6 +34,7 @@ function App() {
         </Router>
         <Footer />
       </CssBaseline>
+
 
   );
 }

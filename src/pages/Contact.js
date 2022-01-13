@@ -1,130 +1,111 @@
-import React, { useState } from 'react';
-import { withStyles } from '@material-ui/core';
-import {
-  TextField,
-  Typography,
-  Button,
-  Grid,
-  Box,
-  FormHelperText,
-} from '@mui/material';
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
+import { Typography, Box, Grid, TextField, Button } from '@mui/material'
 import SendIcon from '@mui/icons-material/Send';
 
-import { validateEmail } from '../utils/helpers';
 
-const InputField = withStyles({
-  root: {
-    '& label.Mui-focused': {
-      color: '#d90429',
-    },
-    '& label': {
-      color: '#2b2d42'
-    },
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: '#2b2d42',
+const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+
+    emailjs.sendForm('gmail', 'template_2h1e8be',
+      form.current, 'user_onwrkXffQf0GSTjiUf5sa')
+      .then((result) => {
+        console.log(result.text);
       },
-      '&:hover fieldset': {
-        borderColor: '#2b2d42',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: '#d90429',
-      }
-    }
+        (error) => {
+          console.log(error.text);
+        });
+  }
 
-  },
-})(TextField);
-
-
-function ContactForm() {
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-
-  const [errorMessage, setErrorMessage] = useState('');
-  const { name, email, message } = formState;
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!errorMessage) {
-      setFormState({ [e.target.name]: e.target.value });
-      console.log('Form', formState);
-    }
-  };
-
-  const handleChange = (e) => {
-    if (e.target.name === 'email') {
-      const isValid = validateEmail(e.target.value);
-      if (!isValid) {
-        setErrorMessage('Your email is invalid.');
-      } else {
-        setErrorMessage('');
-      }
-    } else {
-      if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required.`);
-      } else {
-        setErrorMessage('');
-      }
-    }
-  };
 
   return (
-    <Box component='div' sx={{ pt: 0, mb: 5, height: '100%', backgroundColor: '#8d99ae' }} py={5}>
-        <Grid container direction='row' justifyContent="center" alignItems="center" sx={{ height: '100vh', px: 2 }}>
-          <Box component='form' onSubmit={handleSubmit}>
-            <Typography variant='h5' style={{ color: '#2b2d42', textAlign: 'center', textTransform: 'uppercase' }}>
-              Contact me
-            </Typography>
-            <InputField onBlur={handleChange}
-              fullWidth
-              defaultValue={name}
-              required
-              name='Name'
-              label='Name'
-              variant='outlined'
-              inputProps={{ style: { color: 'blue' } }}
-              margin='dense' size='small'
-            />
-            <InputField onBlur={handleChange}
-              fullWidth
-              defaultValue={email}
-              required
-              name='email'
-              label='Email'
-              variant='outlined'
-              inputProps={{ style: { color: 'blue' } }}
-              margin='dense'
-              size='small' />
-            <InputField onBlur={handleChange}
-              fullWidth
-              defaultValue={message}
-              required
-              name='Message'
-              label='Message'
-              multiline rows={5}
-              variant='outlined'
-              inputProps={{ style: { color: 'blue' } }}
-              margin='dense' size='small' />
+    <Box component='div' sx={{ backgroundColor: '#8d99ae' }}>
+      <Grid container direction='row' justifyContent="center" alignItems="center" sx={{ height: '100vh', px: 2 }}>
+        <form ref={form} onSubmit={sendEmail}>
+          <Typography variant='h5' style={{ color: '#2b2d42', textAlign: 'center', textTransform: 'uppercase' }}>
+            Contact Me
+          </Typography>
+          <TextField
+            label='Name'
+            name='user_name'
+            placeholder='Enter your name'
+            variant='outlined'
+            fullWidth
+            required
+            margin='dense'
+            sx={{'& label.Mui-focused': {
+              color: '#d90429'
+            },'& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#2b2d42',
+              },
+              '&:hover fieldset': {
+                borderColor: '#2b2d42',
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: '#d90429',
+              },
+            },}} />
+          <TextField
+            type='email'
+            label='Email'
+            name='user_email'
+            placeholder='Enter email'
+            variant='outlined'
+            fullWidth
+            required
+            margin='dense'
+            sx={{'& label.Mui-focused': {
+              color: '#d90429'
+            },'& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#2b2d42',
+              },
+              '&:hover fieldset': {
+                borderColor: '#2b2d42',
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: '#d90429',
+              },
+            },}} />
+          <TextField
+            label='Message'
+            name='message'
+            multiline rows={5}
+            placeholder='Type your message here'
+            variant='outlined'
+            fullWidth
+            required
+            margin='dense'
+            sx={{'& label.Mui-focused': {
+              color: '#d90429'
+            },'& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#2b2d42',
+              },
+              '&:hover fieldset': {
+                borderColor: '#2b2d42',
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: '#d90429',
+              },
+            },}} />
+          <Grid sx={{display: 'flex', justifyContent: 'center', pt: 3}}>
             <Button
-              disableElevation
-              disableRipple
-              onSubmit={handleSubmit}
-              sx={{ color: '#edf2f4', bgcolor: '#2b2d42', '&.MuiButtonBase-root:hover': { bgcolor: '#2b2d42', borderColor: '#d90429' } }}
-              variant='outlined'
+              type='submit'
+              variant='contained'
               fullWidth
-              endIcon={<SendIcon />}>
-              Contact me
+              endIcon={<SendIcon />}
+              sx={{ width: '50%', color: '#edf2f4', bgcolor: '#2b2d42', '&.MuiButtonBase-root:hover': { bgcolor: '#2b2d42', borderColor: '#d90429' } }}>
+              Submit
             </Button>
-            {errorMessage && (
-              <FormHelperText>
-                <Typography variant='p' style={{ color: '#2b2d42', textAlign: 'center', textTransform: 'uppercase' }}>
-                  {errorMessage}
-                </Typography>
-              </FormHelperText>
-            )}
-          </Box>
-        </Grid>
+          </Grid>
+        </form>
+      </Grid>
     </Box>
-  );
+  )
 }
 
-export default ContactForm;
+export default Contact
