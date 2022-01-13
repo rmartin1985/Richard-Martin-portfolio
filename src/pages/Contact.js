@@ -1,18 +1,39 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { Typography, Box, Grid, TextField, Button } from '@mui/material'
 import SendIcon from '@mui/icons-material/Send';
 
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleChangeName = (e) => {
+    setName(e.target.value);
+  }
+
+  const handleChangeEmail = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handleChangeMessage = (e) => {
+    setMessage(e.target.value);
+  }
+
   const form = useRef();
 
   const sendEmail = (e) => {
+    e.preventDefault();
 
     emailjs.sendForm('gmail', 'template_2h1e8be',
       form.current, 'user_onwrkXffQf0GSTjiUf5sa')
       .then((result) => {
         console.log(result.text);
+        alert("Your message was sent successfully!")
+        setName('')
+        setEmail('')
+        setMessage('');
       },
         (error) => {
           console.log(error.text);
@@ -29,6 +50,8 @@ const Contact = () => {
           </Typography>
           <TextField
             label='Name'
+            onChange={handleChangeName}
+            value={name}
             name='user_name'
             placeholder='Enter your name'
             variant='outlined'
@@ -49,6 +72,8 @@ const Contact = () => {
               },
             },}} />
           <TextField
+            value={email}
+            onChange={handleChangeEmail}
             type='email'
             label='Email'
             name='user_email'
@@ -72,6 +97,8 @@ const Contact = () => {
             },}} />
           <TextField
             label='Message'
+            value={message}
+            onChange={handleChangeMessage}
             name='message'
             multiline rows={5}
             placeholder='Type your message here'
