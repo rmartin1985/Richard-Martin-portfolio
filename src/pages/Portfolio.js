@@ -1,6 +1,5 @@
 import React from "react";
 import Project from '../components/Project/index'
-import place from '../assets/projects/placeimg_640_480_tech.jpg'
 import spoiler from '../assets/projects/spoiler-alert.png'
 import javaScriptImg from '../assets/projects/javascript.png'
 import fullStack from '../assets/projects/fullstack.jpeg';
@@ -11,52 +10,59 @@ import pwa from '../assets/projects/pwa.jpeg';
 import shopShop from '../assets/projects/shop-shop.gif';
 import books from '../assets/projects/books.gif';
 import budget from '../assets/projects/budget.gif';
-import plan from '../assets/projects/plan.gif';
+import blog from '../assets/projects/tech-blog.gif';
+import fest from '../assets/projects/fest.gif';
 
 function Portfolio() {
     const projects = [
         {
-            title: "Spoiler Alert",
+            title: "React Fest",
             id: 1,
+            img: mern,
+            hover: fest,
+            link: "https://react-fest.herokuapp.com/",
+            git: "https://github.com/MERNerds/react-fest"
+        },
+        {
+            title: "Spoiler Alert",
+            id: 2,
             img: fullStack,
             hover: spoiler,
-            link: "https://obscure-ravine-58128.herokuapp.com/"
+            link: "https://obscure-ravine-58128.herokuapp.com/",
+            git: "https://github.com/rmartin1985/spoiler-alert"
         },
         {
             title: "Shop-Shop",
-            id: 2,
+            id: 3,
             img: eCommerce,
             hover: shopShop,
-            link: "https://radiant-tundra-86540.herokuapp.com/"
+            link: "https://radiant-tundra-86540.herokuapp.com/",
+            git: "https://github.com/rmartin1985/shop-shop"
         },
         {
-            title: "Plan My Day",
-            id: 3,
+            title: "Tech Blog - CMS",
+            id: 4,
             img: javaScriptImg,
-            hover: plan,
-            link: "https://rmartin1985.github.io/plan-my-day/"
+            hover: blog,
+            link: "https://still-cove-88939.herokuapp.com/",
+            git: "https://github.com/rmartin1985/Tech-blog-MVC-Week-14"
         },
         {
             title: "Book Search Engine",
-            id: 4,
+            id: 5,
             img: graphql,
             hover: books,
-            link: "https://pacific-dawn-01756.herokuapp.com/"
+            link: "https://pacific-dawn-01756.herokuapp.com/",
+            git: "https://github.com/rmartin1985/book-search-engine-wk-21"
         },
         {
             title: "Budget Tracker",
-            id: 5,
+            id: 6,
             img: pwa,
             hover: budget,
-            link: "https://warm-chamber-52689.herokuapp.com/"
+            link: "https://warm-chamber-52689.herokuapp.com/",
+            git: "https://github.com/rmartin1985/budget-tracker-wk-19"
         },
-        {
-            title: "MERN",
-            id: 6,
-            img: mern,
-            hover: place,
-            link: "https://rmartin1985.github.io/rock-paper-scissors/"
-        }
     ]
     return (
         <Project

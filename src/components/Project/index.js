@@ -89,7 +89,7 @@ function Project(props) {
                     <Button sx={{ color: '#edf2f4' }} href={project.link} target='_blank' size='small'>
                       Deployed
                     </Button>
-                    <Button size='small' >
+                    <Button size='small' href={project.git} target='_blank'>
                       <GitHubIcon sx={{ color: '#edf2f4' }} />
                     </Button>
                   </CardActions>
