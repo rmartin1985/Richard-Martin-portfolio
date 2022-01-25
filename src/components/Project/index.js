@@ -34,9 +34,9 @@ const useStyles = makeStyles({
     color: '#edf2f4',
     backgroundColor: '#d90429',
     display: 'flex',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     borderTop: '5px solid #2b2d42',
-    alignItems: 'center'
+    // alignItems: 'center'
 
   },
   cardActions: {
@@ -80,21 +80,38 @@ function Project(props) {
                   alt={project.title}
                   image={selectElement === project.id && over ? project.hover : project.img}
                 />
-                <CardContent className={classes.cardContent} sx={{ height: 100}}>
-                  <Typography gutterBottom variant="h5">
-                    {project.title}
-                  </Typography>
+                <CardContent className={classes.cardContent}>
+                  <Grid container>
+                    <Grid item xs={12}>
+                      <Typography gutterBottom variant="h5">
+                        {project.title}
+                      </Typography>
+                    </Grid>
 
-                  <CardActions className={classes.cardActions}>
-                    <Button sx={{ color: '#edf2f4' }} href={project.link} target='_blank' size='small'>
-                      Deployed
-                    </Button>
-                    <Button size='small' href={project.git} target='_blank'>
-                      <GitHubIcon sx={{ color: '#edf2f4' }} />
-                    </Button>
-                  </CardActions>
+                    <Grid item xs={12}>
+                      <Typography variant='body2'>
+                        {project.description}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Typography variant='body2'>
+                        Built with: {project.built}
+                      </Typography>
+                    </Grid>
+                  </Grid>
                 </CardContent>
-
+                <Grid container>
+                  <Grid item xs={12}>
+                    <CardActions className={classes.cardActions}>
+                      <Button sx={{ color: '#edf2f4' }} href={project.link} target='_blank' size='small'>
+                        Deployed
+                      </Button>
+                      <Button size='small' href={project.git} target='_blank'>
+                        <GitHubIcon sx={{ color: '#edf2f4' }} />
+                      </Button>
+                    </CardActions>
+                  </Grid>
+                </Grid>
               </Card>
             </Grid>
           ))}
