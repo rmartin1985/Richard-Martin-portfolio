@@ -53,7 +53,7 @@ const Contact = () => {
             label='Name'
             onChange={handleChangeName}
             value={name}
-            name='user_name'
+            name='name'
             placeholder='Enter your name'
             variant='outlined'
             fullWidth
@@ -79,7 +79,7 @@ const Contact = () => {
             onChange={handleChangeEmail}
             type='email'
             label='Email'
-            name='user_email'
+            name='email'
             placeholder='Enter email'
             variant='outlined'
             fullWidth
